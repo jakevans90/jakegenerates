@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { InfoPage } from "@/components/site-shell";
+export const metadata: Metadata = { title: "Contact" };
+export default function ContactPage() { return <InfoPage eyebrow="Contact" title="Have a useful tool idea?"><p className="lead">Questions, feedback, bug reports, and practical tool ideas are welcome. Real-world requests help shape what gets built next.</p><section className="contact-card"><p className="kicker">Email Jake</p><h2>Let’s make the repetitive part easier.</h2><p>Describe the task, what makes it tedious, and what a useful result would look like. Please do not include passwords, private customer information, or other sensitive data.</p><a className="email-button" href="mailto:contact@jakegenerates.com">contact@jakegenerates.com <span aria-hidden="true">↗</span></a><p className="fine-print">This is the public JakeGenerates contact address. Response time may vary.</p></section></InfoPage>; }
