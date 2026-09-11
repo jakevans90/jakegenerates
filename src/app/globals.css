@@ -23,6 +23,7 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.45; }
 a { color: inherit; text-decoration: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .shell { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
 .site-header { border-top: 4px solid var(--green); border-bottom: 1px solid #2d3231; background: var(--ink); color: white; position: sticky; top: 0; z-index: 10; }
 .nav-wrap { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
@@ -53,12 +54,16 @@ a { color: inherit; text-decoration: none; }
 .tools-section .kicker { color: var(--green); }
 .section-heading h2, .coming-soon h2 { font-family: var(--font-geist-sans); font-size: clamp(2.5rem, 5vw, 4.3rem); line-height: .98; letter-spacing: -.06em; margin: 0; }
 .section-heading > p { max-width: 430px; color: #b8c0bd; line-height: 1.65; margin: 0; }
-.tool-card { border: 1px solid #424847; background: #171b1b; min-height: 300px; display: grid; grid-template-columns: 80px 1fr auto; gap: 42px; align-items: center; padding: 46px; box-shadow: 10px 10px 0 var(--pink); }
+.workflow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: -18px 0 34px; color: #c4cbc8; font-family: var(--font-geist-mono); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.workflow span[aria-hidden="true"] { color: var(--green); }
+.tool-list { display: grid; gap: 30px; }
+.tool-card { border: 1px solid #424847; background: #171b1b; min-height: 300px; display: grid; grid-template-columns: 80px minmax(0, 1fr) auto; gap: 42px; align-items: center; padding: 46px; box-shadow: 10px 10px 0 var(--pink); }
 .tool-number { font-family: var(--font-geist-mono); color: var(--green); font-size: .9rem; align-self: start; }
 .status { display: flex; align-items: center; gap: 9px; color: #c4cbc8; margin-bottom: 20px; }
 .status span { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px #b9ff3822; }
 .tool-content h3 { font-family: var(--font-geist-sans); font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; letter-spacing: -.055em; margin: 0 0 18px; }
 .tool-content > p { max-width: 600px; color: #b8c0bd; font-size: 1.05rem; line-height: 1.6; }
+.tool-content > .tool-value { margin-bottom: 8px; color: white; font-weight: 800; }
 .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .tool-tags span { border: 1px solid #49504e; padding: 6px 10px; font-family: var(--font-geist-mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; }
 .primary-button { background: var(--green); color: var(--ink); min-height: 56px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 22px; font-weight: 900; border: 2px solid var(--green); white-space: nowrap; transition: background .2s, color .2s; }
@@ -101,6 +106,8 @@ a { color: inherit; text-decoration: none; }
   .section-heading { align-items: start; flex-direction: column; gap: 25px; }
   .tool-card { grid-template-columns: 1fr; gap: 18px; padding: 28px 23px; box-shadow: 7px 7px 0 var(--pink); }
   .primary-button { grid-column: 1; width: 100%; } .tool-number { display: none; }
+  .workflow { align-items: flex-start; flex-direction: column; margin-top: -8px; }
+  .workflow span[aria-hidden="true"] { transform: rotate(90deg); margin-left: 5px; }
   .tools-section { padding-block: 70px 85px; } .coming-soon { padding-block: 85px 95px; }
   .footer-top { align-items: start; flex-direction: column; } .site-footer nav { gap: 18px; flex-wrap: wrap; }
   .footer-bottom { align-items: start; flex-direction: column; justify-content: center; gap: 7px; }
