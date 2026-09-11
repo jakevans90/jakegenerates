@@ -1,4 +1,7 @@
+import Image from "next/image";
+
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import heroLogo from "../../public/brand/jg-circle.png";
 
 const serviceReportUrl = process.env.NEXT_PUBLIC_SERVICE_REPORT_URL || "https://service-reports.jakegenerates.com";
 const serviceQuoteUrl = "https://service-quotes.jakegenerates.com/";
@@ -10,7 +13,7 @@ export default function Home() {
       <h1>Less busywork.<br /><em>More done.</em></h1>
       <p className="hero-copy">JakeGenerates is a growing collection of focused tools that make repetitive work faster, simpler, and a little less tedious.</p>
       <a className="text-link" href="#tools">See the tools <span aria-hidden="true">↓</span></a>
-      <div className="hero-mark" aria-hidden="true"><span>JG</span><div className="hero-chip">Built for real work</div></div>
+      <div className="hero-mark" aria-hidden="true"><Image src={heroLogo} alt="" priority sizes="(max-width: 850px) 130px, 215px" /></div>
     </section>
     <section className="tools-section" id="tools"><div className="shell">
       <div className="section-heading"><div><p className="kicker">Available now</p><h2>Practical tools for service work.</h2></div><p>Quote the work, perform it, then document the service—each tool stays focused on doing its part well.</p></div>
