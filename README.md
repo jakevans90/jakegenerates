@@ -42,6 +42,6 @@ npm run build
 4. Deploy, then attach the `jakegenerates.com` custom domain in **Settings → Domains**.
 5. Configure `service-reports.jakegenerates.com` on the Vercel project that hosts the Service Report Generator.
 
-No database, authentication, billing, analytics, or other services are required.
+No database, authentication, or billing services are required. Google Analytics is configured in the root layout.
 
-Before launch, review the Privacy Policy and Terms of Use for the exact hosting and tool behavior you deploy. The current copy assumes this umbrella site has no accounts, payments, analytics, or advertising cookies; linked tools may publish their own policies.
+Before launch, review the Privacy Policy and Terms of Use for the exact hosting and tool behavior you deploy. The current copy discloses Google Analytics; linked tools may publish their own policies.

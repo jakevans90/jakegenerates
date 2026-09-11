@@ -1,4 +1,31 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/site-shell";
 export const metadata: Metadata = { title: "Privacy" };
-export default function PrivacyPage() { return <InfoPage eyebrow="Legal" title="Privacy policy"><p className="legal-date">Last updated: September 10, 2026</p><p className="lead">JakeGenerates is designed to be straightforward about what information this site uses.</p><section className="info-card"><h2>Information collected by this website</h2><p>This umbrella website does not currently provide accounts, accept payments, or use analytics or advertising cookies. Standard hosting and security logs may be processed by the hosting provider to deliver and protect the site.</p></section><section className="info-card"><h2>Information you provide</h2><p>If you email Jake, the information you send will be used to read and respond to your message. Do not email passwords, private customer data, or other sensitive information.</p></section><section className="info-card"><h2>Individual tools and external links</h2><p>JakeGenerates links to separately operated tools and may link to other websites. A tool may process information differently from this umbrella site, so review the privacy notice presented with that tool before using it.</p></section><section className="info-card"><h2>Changes and questions</h2><p>This policy may be updated as the website and its tools evolve. Questions can be sent to <a href="mailto:contact@jakegenerates.com">contact@jakegenerates.com</a>.</p></section></InfoPage>; }
+export default function PrivacyPage() {
+  return (
+    <InfoPage eyebrow="Legal" title="Privacy policy">
+      <p className="legal-date">Last updated: September 11, 2026</p>
+      <p className="lead">JakeGenerates is designed to be straightforward about what information this site uses.</p>
+      <section className="info-card">
+        <h2>Information collected by this website</h2>
+        <p>This umbrella website does not currently provide accounts or accept payments. Standard hosting and security logs may be processed by the hosting provider to deliver and protect the site.</p>
+      </section>
+      <section className="info-card">
+        <h2>Analytics</h2>
+        <p>JakeGenerates uses Google Analytics to understand how visitors use the site and improve the experience. Google may collect usage information such as pages visited, device and browser details, and approximate location.</p>
+      </section>
+      <section className="info-card">
+        <h2>Information you provide</h2>
+        <p>If you email Jake, the information you send will be used to read and respond to your message. Do not email passwords, private customer data, or other sensitive information.</p>
+      </section>
+      <section className="info-card">
+        <h2>Individual tools and external links</h2>
+        <p>JakeGenerates links to separately operated tools and may link to other websites. A tool may process information differently from this umbrella site, so review the privacy notice presented with that tool before using it.</p>
+      </section>
+      <section className="info-card">
+        <h2>Changes and questions</h2>
+        <p>This policy may be updated as the website and its tools evolve. Questions can be sent to <a href="mailto:contact@jakegenerates.com">contact@jakegenerates.com</a>.</p>
+      </section>
+    </InfoPage>
+  );
+}
