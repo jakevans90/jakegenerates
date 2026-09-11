@@ -5,6 +5,7 @@ import heroLogo from "../../public/brand/jg-circle.png";
 
 const serviceReportUrl = process.env.NEXT_PUBLIC_SERVICE_REPORT_URL || "https://service-reports.jakegenerates.com";
 const serviceQuoteUrl = "https://service-quotes.jakegenerates.com/";
+const serviceInvoiceUrl = "https://service-invoices.jakegenerates.com/";
 
 export default function Home() {
   return <><SiteHeader /><main>
@@ -16,8 +17,8 @@ export default function Home() {
       <div className="hero-mark" aria-hidden="true"><Image src={heroLogo} alt="" priority sizes="(max-width: 850px) 130px, 215px" /></div>
     </section>
     <section className="tools-section" id="tools"><div className="shell">
-      <div className="section-heading"><div><p className="kicker">Available now</p><h2>Practical tools for service work.</h2></div><p>Quote the work, perform it, then document the service—each tool stays focused on doing its part well.</p></div>
-      <div className="workflow" aria-label="Service workflow"><span>Quote the work</span><span aria-hidden="true">→</span><span>Perform the work</span><span aria-hidden="true">→</span><span>Document the service</span></div>
+      <div className="section-heading"><div><p className="kicker">Available now</p><h2>Practical tools for service work.</h2></div><p>Quote the work, document the service, and invoice the customer—each tool stays focused on doing its part well.</p></div>
+      <div className="workflow" aria-label="Service workflow"><span>Quote the work</span><span aria-hidden="true">→</span><span>Perform the work</span><span aria-hidden="true">→</span><span>Document the service</span><span aria-hidden="true">→</span><span>Invoice the customer</span></div>
       <div className="tool-list">
         <article className="tool-card" id="service-quote-generator">
           <div className="tool-number">01</div>
@@ -28,6 +29,11 @@ export default function Home() {
           <div className="tool-number">02</div>
           <div className="tool-content"><div className="status"><span aria-hidden="true" /> Ready to use</div><h3>Service Report Generator</h3><p>Turn service notes into a clean, professional report without rebuilding the same document from scratch.</p><div className="tool-tags" aria-label="Service Report Generator features"><span>Fast</span><span>Consistent</span><span>Field-ready</span></div></div>
           <a className="primary-button" href={serviceReportUrl} target="_blank" rel="noreferrer">Open Tool <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
+        </article>
+        <article className="tool-card" id="service-invoice-generator">
+          <div className="tool-number">03</div>
+          <div className="tool-content"><div className="status"><span aria-hidden="true" /> Ready to use</div><h3>Service Invoice Generator</h3><p className="tool-value">Turn completed work into a clean professional invoice in minutes.</p><p>Create professional service invoices with detailed parts and labor, discounts, fees, tax, payment tracking, branding, reusable templates, invoice numbering, and PDF export.</p><div className="tool-tags" aria-label="Service Invoice Generator features"><span>Parts &amp; service</span><span>SKU / part numbers</span><span>Flexible discounts</span><span>Service, travel &amp; misc. fees</span><span>Tax calculations</span><span>Invoice numbering</span><span>Paid &amp; balance due</span><span>Reusable templates</span><span>Company branding</span><span>PDF export</span><span>Draft recovery</span></div></div>
+          <a className="primary-button" href={serviceInvoiceUrl} target="_blank" rel="noreferrer">Create a Service Invoice <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
         </article>
       </div>
     </div></section>
