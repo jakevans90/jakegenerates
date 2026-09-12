@@ -10,15 +10,15 @@ const tools = [
   { number: "04", id: "service-invoice-generator", name: "Service Invoice Generator", value: "Turn completed work into a clear invoice.", description: "Create an itemized service invoice with payment details, balance due, your branding, and a shareable PDF.", features: ["Parts & labor", "Payment tracking", "Branded PDF"], cta: "Create an Invoice", url: "https://service-invoices.jakegenerates.com/" },
 ];
 
-const calculatorFeatures = [
-  "Total job cost",
-  "Gross profit",
-  "Margin vs. markup",
-  "Break-even revenue",
-  "Profit per labor hour",
-  "Target-margin revenue",
-  "Cost breakdown",
-  "Browser-local draft recovery",
+const calculators = [
+  {
+    id: "job-profit-calculator",
+    name: "Job Profit Calculator",
+    description: "See what a job actually made after labor, parts, subcontractors, travel, processing fees, and overhead.",
+    features: ["Full job cost", "Profit & margin", "Break-even revenue", "Target pricing"],
+    cta: "Calculate Job Profit",
+    url: "https://job-profit.jakegenerates.com/",
+  },
 ];
 
 export default function Home() {
@@ -26,8 +26,8 @@ export default function Home() {
     <section className="hero shell">
       <div className="hero-content">
         <div className="eyebrow"><span aria-hidden="true" /> Practical software, made by Jake</div>
-        <h1>Service paperwork.<br /><em>Done faster.</em></h1>
-        <p className="hero-copy">Create polished service documents and make quick job-pricing decisions with focused tools built for real service work.</p>
+        <h1>Service work.<br /><em>Done smarter.</em></h1>
+        <p className="hero-copy">Create polished service documents and make confident job-pricing decisions with focused tools built for real service businesses.</p>
         <a className="primary-button hero-button" href="#tools">Choose a Tool <span aria-hidden="true">↓</span></a>
       </div>
       <div className="hero-mark" aria-hidden="true"><Image src={heroLogo} alt="" priority sizes="(max-width: 850px) 130px, 215px" /></div>
@@ -53,22 +53,19 @@ export default function Home() {
     <section className="calculators-section" id="calculators" aria-labelledby="calculators-title"><div className="shell">
       <div className="calculator-heading">
         <div><p className="kicker">Calculators</p><h2 id="calculators-title">Know the numbers<br /><em>behind the job.</em></h2></div>
-        <p>Free calculators for quick service-business decisions. No account required.</p>
+        <p>Quick, focused calculators for service-business decisions. Each works independently, outside the document workflow.</p>
       </div>
-      <article className="calculator-card" id="job-profit-calculator">
-        <div className="calculator-card-copy">
-          <div className="calculator-meta"><span>Free calculator</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
-          <h3>Job Profit Calculator</h3>
-          <p className="calculator-lead">See what a job actually made after labor, parts, subcontractors, travel, processing fees, and overhead.</p>
-          <ul className="calculator-features" aria-label="Job Profit Calculator highlights">
-            {calculatorFeatures.map((feature) => <li key={feature}>{feature}</li>)}
+      <div className="calculator-list">
+        {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
+          <div className="calculator-meta"><span>Free to use</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
+          <h3>{calculator.name}</h3>
+          <p className="calculator-lead">{calculator.description}</p>
+          <ul className="calculator-features" aria-label={`${calculator.name} highlights`}>
+            {calculator.features.map((feature) => <li key={feature}>{feature}</li>)}
           </ul>
-        </div>
-        <div className="calculator-action">
-          <p>Price with the full cost picture—not just the difference between the quote and the parts bill.</p>
-          <a className="calculator-button" href="https://job-profit.jakegenerates.com/" target="_blank" rel="noreferrer">Calculate Job Profit <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
-        </div>
-      </article>
+          <a className="calculator-button" href={calculator.url} target="_blank" rel="noreferrer">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
+        </article>)}
+      </div>
     </div></section>
 
     <section className="coming-soon shell"><p className="kicker">On the workbench</p><div className="coming-grid"><h2>More useful tools,<br /><em>when they&apos;re ready.</em></h2><p>We&apos;re building a small, thoughtful collection—not a crowded toolbox. New tools will earn their place by saving time on real work.</p></div></section>
