@@ -19,6 +19,14 @@ const calculators = [
     cta: "Calculate Job Profit",
     url: "https://job-profit.jakegenerates.com/",
   },
+  {
+    id: "parts-labor-markup-calculator",
+    name: "Parts & Labor Markup Calculator",
+    description: "Turn cost into a selling price and compare markup, margin, and target-margin pricing before you quote the job.",
+    features: ["Parts & labor pricing", "Markup vs. margin", "Three pricing modes", "Combined scenario & local drafts"],
+    cta: "Calculate Markup & Margin",
+    url: "https://markup.jakegenerates.com/",
+  },
 ];
 
 export default function Home() {
@@ -57,7 +65,7 @@ export default function Home() {
       </div>
       <div className="calculator-list">
         {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
-          <div className="calculator-meta"><span>Free to use</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
+          <div className="calculator-meta"><span>Free calculator</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
           <h3>{calculator.name}</h3>
           <p className="calculator-lead">{calculator.description}</p>
           <ul className="calculator-features" aria-label={`${calculator.name} highlights`}>
