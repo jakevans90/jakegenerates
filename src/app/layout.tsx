@@ -6,7 +6,7 @@ const GA_MEASUREMENT_ID = "G-DW36H2JDZ2";
 
 export const metadata: Metadata = {
   title: { default: "JakeGenerates — Practical tools for repetitive work", template: "%s | JakeGenerates" },
-  description: "Free service-business calculators for pricing decisions, plus focused generators for creating professional quotes, change orders, reports, and invoices.",
+  description: "Free calculators for service-business decisions, plus professional generators for quotes, service agreements, change orders, reports, and invoices.",
   icons: {
     icon: "/brand/jg-circle.png",
     shortcut: "/brand/jg-circle.png",

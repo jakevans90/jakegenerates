@@ -5,9 +5,10 @@ import heroLogo from "../../public/brand/jg-circle.png";
 
 const tools = [
   { number: "01", id: "service-quote-generator", name: "Service Quote Generator", value: "Price the work and send a polished quote.", description: "Build itemized service quotes with your branding, clear totals, and a professional PDF ready to share.", features: ["Parts & labor", "Pricing & tax", "Branded PDF"], cta: "Create a Quote", url: "https://service-quotes.jakegenerates.com/" },
-  { number: "02", id: "change-order-generator", name: "Change Order Generator", value: "Keep scope and price changes clear.", description: "Document additions or deductions, show the revised job total, and capture an approval in one clean PDF.", features: ["Add & deduct", "Revised total", "Approval section"], cta: "Create a Change Order", url: "https://change-orders.jakegenerates.com/" },
-  { number: "03", id: "service-report-generator", name: "Service Report Generator", value: "Turn field notes into a client-ready report.", description: "Organize the work performed, findings, and recommendations into a consistent professional record.", features: ["Work performed", "Findings", "Professional PDF"], cta: "Create a Service Report", url: process.env.NEXT_PUBLIC_SERVICE_REPORT_URL || "https://service-reports.jakegenerates.com" },
-  { number: "04", id: "service-invoice-generator", name: "Service Invoice Generator", value: "Turn completed work into a clear invoice.", description: "Create an itemized service invoice with payment details, balance due, your branding, and a shareable PDF.", features: ["Parts & labor", "Payment tracking", "Branded PDF"], cta: "Create an Invoice", url: "https://service-invoices.jakegenerates.com/" },
+  { number: "02", id: "service-agreement-generator", name: "Service Agreement Generator", value: "Set recurring service expectations clearly.", description: "Create a clear, professional recurring-service agreement for maintenance and support work.", features: ["Coverage & exclusions", "Flexible service pricing", "Renewal & termination terms", "Branded PDF"], cta: "Create a Service Agreement", url: "https://service-agreements.jakegenerates.com/" },
+  { number: "03", id: "change-order-generator", name: "Change Order Generator", value: "Keep scope and price changes clear.", description: "Document additions or deductions, show the revised job total, and capture an approval in one clean PDF.", features: ["Add & deduct", "Revised total", "Approval section"], cta: "Create a Change Order", url: "https://change-orders.jakegenerates.com/" },
+  { number: "04", id: "service-report-generator", name: "Service Report Generator", value: "Turn field notes into a client-ready report.", description: "Organize the work performed, findings, and recommendations into a consistent professional record.", features: ["Work performed", "Findings", "Professional PDF"], cta: "Create a Service Report", url: process.env.NEXT_PUBLIC_SERVICE_REPORT_URL || "https://service-reports.jakegenerates.com" },
+  { number: "05", id: "service-invoice-generator", name: "Service Invoice Generator", value: "Turn completed work into a clear invoice.", description: "Create an itemized service invoice with payment details, balance due, your branding, and a shareable PDF.", features: ["Parts & labor", "Payment tracking", "Branded PDF"], cta: "Create an Invoice", url: "https://service-invoices.jakegenerates.com/" },
 ];
 
 const calculators = [
@@ -71,11 +72,11 @@ export default function Home() {
     </div></section>
 
     <section className="tools-section" id="generators" aria-labelledby="generators-title"><div className="shell">
-      <div className="section-heading"><div><p className="kicker">Document generators</p><h2 id="generators-title">Turn the work into professional documents.</h2></div><p>Generators help move the job from quote to invoice. Choose the document you need; each tool works independently with no account or connected workflow required.</p></div>
+      <div className="section-heading"><div><p className="kicker">Document generators</p><h2 id="generators-title">Turn each stage into professional paperwork.</h2></div><p>Build the document the job needs, from the first quote through the final invoice. Every generator works independently—tools do not share or transfer your data.</p></div>
       <div className="workflow-block" aria-labelledby="workflow-title">
         <p className="workflow-label" id="workflow-title">A clear service workflow</p>
         <ol className="workflow">
-          <li><span>01</span>Quote</li><li><span>02</span>Change Order</li><li className="workflow-action"><span>03</span>Perform</li><li><span>04</span>Document</li><li><span>05</span>Invoice</li>
+          <li><span>01</span>Quote</li><li><span>02</span>Service Agreement</li><li><span>03</span>Change Order</li><li className="workflow-action"><span>04</span>Perform</li><li><span>05</span>Service Report</li><li><span>06</span>Invoice</li>
         </ol>
       </div>
       <div className="tool-list">
