@@ -80,7 +80,7 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .tool-content > .tool-value + p { margin-top: 0; }
 .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 30px; padding: 0; list-style: none; }
 .tool-tags li { border: 1px solid #49504e; padding: 6px 10px; font-family: var(--font-geist-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; }
-.primary-button { background: var(--green); color: var(--ink); min-height: 56px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 22px; font-weight: 900; border: 2px solid var(--green); white-space: nowrap; transition: background .2s, color .2s; }
+.primary-button { background: var(--green); color: var(--ink); min-height: 56px; padding: 10px 22px; display: inline-flex; align-items: center; justify-content: center; gap: 16px; font-weight: 900; border: 2px solid var(--green); text-align: center; transition: background .2s, color .2s; }
 .primary-button:hover { background: transparent; color: var(--green); }
 .primary-button:focus-visible { outline-color: white; }
 .calculators-section { position: relative; overflow: hidden; padding: 105px 0 115px; background: var(--surface-soft); border-bottom: 1px solid var(--border); }
@@ -135,6 +135,18 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
   .calculator-list > :only-child { grid-column: auto; }
   .coming-grid { grid-template-columns: 1fr; gap: 35px; }
 }
+@media (max-width: 1100px) and (min-width: 851px) {
+  .workflow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 16px; }
+  .workflow li:nth-child(3)::after { content: "↘"; }
+  .tool-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tool-card { grid-column: span 2; }
+  .tool-list > :nth-child(4):nth-last-child(2) { grid-column: span 2; }
+  .tool-list > :nth-child(5):last-child { grid-column: 2 / span 2; }
+}
+@media (max-width: 850px) and (min-width: 621px) {
+  .workflow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 16px; }
+  .workflow li:nth-child(3)::after { content: "↘"; }
+}
 @media (max-width: 620px) {
   .shell { width: calc(100% - 30px); max-width: 1160px; }
   .nav-wrap { min-height: 70px; position: relative; } .site-header nav { position: absolute; right: 0; gap: 8px; } .site-header nav a:not(.nav-contact) { display: none; } .site-header nav .nav-contact { display: inline-flex; }
@@ -164,7 +176,7 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
   .tool-card { padding: 27px 22px; box-shadow: 6px 6px 0 var(--pink); }
   .tool-card-top { margin-bottom: 22px; }
   .tool-content h3 { font-size: clamp(1.7rem, 7.2vw, 2rem); overflow-wrap: anywhere; }
-  .primary-button { width: 100%; white-space: normal; text-align: center; }
+  .primary-button { width: 100%; }
   .tools-section { padding-block: 70px 85px; } .calculators-section { padding-block: 76px 84px; } .coming-soon { padding-block: 85px 95px; }
   .footer-top { align-items: start; flex-direction: column; } .site-footer nav { gap: 18px; flex-wrap: wrap; }
   .footer-bottom { align-items: start; flex-direction: column; justify-content: center; gap: 7px; }
