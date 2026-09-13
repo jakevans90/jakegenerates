@@ -27,6 +27,14 @@ const calculators = [
     cta: "Calculate Markup & Margin",
     url: "https://markup.jakegenerates.com/",
   },
+  {
+    id: "break-even-calculator",
+    name: "Break-Even Calculator",
+    description: "See how many jobs, how much revenue, or how many billable hours you need to cover costs and hit a profit target.",
+    features: ["Per-job break-even", "Billable-hours break-even", "Contribution margin", "Target-profit jobs, hours & revenue", "Local draft recovery"],
+    cta: "Calculate Break-Even",
+    url: "https://break-even.jakegenerates.com/",
+  },
 ];
 
 export default function Home() {
@@ -35,14 +43,35 @@ export default function Home() {
       <div className="hero-content">
         <div className="eyebrow"><span aria-hidden="true" /> Practical software, made by Jake</div>
         <h1>Service work.<br /><em>Done smarter.</em></h1>
-        <p className="hero-copy">Create polished service documents and make confident job-pricing decisions with focused tools built for real service businesses.</p>
-        <a className="primary-button hero-button" href="#tools">Choose a Tool <span aria-hidden="true">↓</span></a>
+        <p className="hero-copy">Make confident service-business decisions, then turn the work into polished professional documents with focused tools built for the job.</p>
+        <div className="hero-actions">
+          <a className="primary-button hero-button" href="#tools">Use a Calculator <span aria-hidden="true">↓</span></a>
+          <a className="secondary-button hero-button" href="#generators">Create a Document <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
       <div className="hero-mark" aria-hidden="true"><Image src={heroLogo} alt="" priority sizes="(max-width: 850px) 130px, 215px" /></div>
     </section>
 
-    <section className="tools-section" id="tools" aria-labelledby="generators-title"><div className="shell">
-      <div className="section-heading"><div><p className="kicker">Document generators</p><h2 id="generators-title">One job. Four focused tools.</h2></div><p>Create the document the work calls for. Each generator works independently—no account or connected workflow required.</p></div>
+    <section className="calculators-section" id="tools" aria-labelledby="calculators-title"><div className="shell">
+      <div className="calculator-heading">
+        <div><p className="kicker">Free calculators</p><h2 id="calculators-title">Know the numbers<br /><em>behind the job.</em></h2></div>
+        <p>Free calculators for quick service-business decisions. Use them as much as you need—no account required.</p>
+      </div>
+      <div className="calculator-list">
+        {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
+          <div className="calculator-meta"><span>Free to use</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
+          <h3>{calculator.name}</h3>
+          <p className="calculator-lead">{calculator.description}</p>
+          <ul className="calculator-features" aria-label={`${calculator.name} highlights`}>
+            {calculator.features.map((feature) => <li key={feature}>{feature}</li>)}
+          </ul>
+          <a className="calculator-button" href={calculator.url} target="_blank" rel="noreferrer">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
+        </article>)}
+      </div>
+    </div></section>
+
+    <section className="tools-section" id="generators" aria-labelledby="generators-title"><div className="shell">
+      <div className="section-heading"><div><p className="kicker">Document generators</p><h2 id="generators-title">Turn the work into professional documents.</h2></div><p>Generators help move the job from quote to invoice. Choose the document you need; each tool works independently with no account or connected workflow required.</p></div>
       <div className="workflow-block" aria-labelledby="workflow-title">
         <p className="workflow-label" id="workflow-title">A clear service workflow</p>
         <ol className="workflow">
@@ -54,24 +83,6 @@ export default function Home() {
           <div className="tool-card-top"><span className="tool-number">{tool.number}</span><span className="status"><span aria-hidden="true" /> Ready to use</span></div>
           <div className="tool-content"><h3>{tool.name}</h3><p className="tool-value">{tool.value}</p><p>{tool.description}</p><ul className="tool-tags" aria-label={`${tool.name} highlights`}>{tool.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div>
           <a className="primary-button" href={tool.url} target="_blank" rel="noreferrer">{tool.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
-        </article>)}
-      </div>
-    </div></section>
-
-    <section className="calculators-section" id="calculators" aria-labelledby="calculators-title"><div className="shell">
-      <div className="calculator-heading">
-        <div><p className="kicker">Calculators</p><h2 id="calculators-title">Know the numbers<br /><em>behind the job.</em></h2></div>
-        <p>Quick, focused calculators for service-business decisions. Each works independently, outside the document workflow.</p>
-      </div>
-      <div className="calculator-list">
-        {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
-          <div className="calculator-meta"><span>Free calculator</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
-          <h3>{calculator.name}</h3>
-          <p className="calculator-lead">{calculator.description}</p>
-          <ul className="calculator-features" aria-label={`${calculator.name} highlights`}>
-            {calculator.features.map((feature) => <li key={feature}>{feature}</li>)}
-          </ul>
-          <a className="calculator-button" href={calculator.url} target="_blank" rel="noreferrer">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
         </article>)}
       </div>
     </div></section>
