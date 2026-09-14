@@ -89,13 +89,14 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .calculator-heading h2 { font-family: var(--font-geist-sans); font-size: clamp(2.5rem, 5vw, 4.3rem); line-height: .98; letter-spacing: -.06em; margin: 0; }
 .calculator-heading h2 em { color: var(--pink-deep); font-style: normal; }
 .calculator-heading > p { max-width: 390px; color: var(--muted); font-size: 1.05rem; line-height: 1.65; margin: 0; }
-.calculator-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.calculator-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .calculator-card { min-height: 470px; display: flex; flex-direction: column; padding: 32px; border: 2px solid var(--ink); background: white; box-shadow: 10px 10px 0 var(--green); }
 .calculator-list > :only-child { grid-column: 1 / -1; }
 .calculator-meta { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 30px; font-family: var(--font-geist-mono); text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; font-weight: 800; }
 .calculator-meta > span:first-child { padding: 7px 10px; background: var(--ink); color: var(--green); }
 .calculator-status { display: inline-flex; align-items: center; gap: 9px; color: var(--muted); }
 .calculator-status > span { width: 8px; height: 8px; border-radius: 50%; background: var(--green-deep); box-shadow: 0 0 0 4px #3f720018; }
+.calculator-question { margin: 0 0 10px; color: var(--pink-deep); font-family: var(--font-geist-mono); font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
 .calculator-card h3 { font-family: var(--font-geist-sans); font-size: clamp(2rem, 3vw, 2.8rem); line-height: .98; letter-spacing: -.055em; margin: 0 0 22px; text-wrap: balance; }
 .calculator-lead { max-width: 760px; color: var(--muted); font-size: 1.05rem; line-height: 1.65; margin: 0; }
 .calculator-features { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 32px; padding: 0; list-style: none; }

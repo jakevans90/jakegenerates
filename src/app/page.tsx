@@ -13,14 +13,18 @@ const tools = [
 
 const calculators = [
   {
-    id: "job-profit-calculator",
-    name: "Job Profit Calculator",
-    description: "See what a job actually made after labor, parts, subcontractors, travel, processing fees, and overhead.",
-    features: ["Full job cost", "Profit & margin", "Break-even revenue", "Target pricing"],
-    cta: "Calculate Job Profit",
-    url: "https://job-profit.jakegenerates.com/",
+    number: "01",
+    question: "What should I charge?",
+    id: "labor-rate-calculator",
+    name: "Labor Rate Calculator",
+    description: "Find the hourly rate you need to charge to cover labor, overhead, non-billable time, and your target margin.",
+    features: ["Loaded labor cost", "Billable utilization", "Overhead per billable hour", "Break-even & target-margin rates", "Current-rate comparison", "Browser-local draft recovery"],
+    cta: "Calculate Labor Rate",
+    url: "https://labor-rate.jakegenerates.com/",
   },
   {
+    number: "02",
+    question: "How should I price parts and labor?",
     id: "parts-labor-markup-calculator",
     name: "Parts & Labor Markup Calculator",
     description: "Turn cost into a selling price and compare markup, margin, and target-margin pricing before you quote the job.",
@@ -29,12 +33,24 @@ const calculators = [
     url: "https://markup.jakegenerates.com/",
   },
   {
+    number: "03",
+    question: "What do I need to break even?",
     id: "break-even-calculator",
     name: "Break-Even Calculator",
     description: "See how many jobs, how much revenue, or how many billable hours you need to cover costs and hit a profit target.",
     features: ["Per-job break-even", "Billable-hours break-even", "Contribution margin", "Target-profit jobs, hours & revenue", "Local draft recovery"],
     cta: "Calculate Break-Even",
     url: "https://break-even.jakegenerates.com/",
+  },
+  {
+    number: "04",
+    question: "What did the job actually make?",
+    id: "job-profit-calculator",
+    name: "Job Profit Calculator",
+    description: "See what a job actually made after labor, parts, subcontractors, travel, processing fees, and overhead.",
+    features: ["Full job cost", "Profit & margin", "Break-even revenue", "Target pricing"],
+    cta: "Calculate Job Profit",
+    url: "https://job-profit.jakegenerates.com/",
   },
 ];
 
@@ -56,11 +72,12 @@ export default function Home() {
     <section className="calculators-section" id="tools" aria-labelledby="calculators-title"><div className="shell">
       <div className="calculator-heading">
         <div><p className="kicker">Free calculators</p><h2 id="calculators-title">Know the numbers<br /><em>behind the job.</em></h2></div>
-        <p>Free calculators for quick service-business decisions. Use them as much as you need—no account required.</p>
+        <p>Free calculators for smarter service-business pricing decisions. Use them as much as you need. Start with labor rate, work through markup and break-even, then check the job&apos;s actual profit.</p>
       </div>
       <div className="calculator-list">
         {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
-          <div className="calculator-meta"><span>Free to use</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
+          <div className="calculator-meta"><span>{calculator.number} · Free to use</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
+          <p className="calculator-question">{calculator.question}</p>
           <h3>{calculator.name}</h3>
           <p className="calculator-lead">{calculator.description}</p>
           <ul className="calculator-features" aria-label={`${calculator.name} highlights`}>
