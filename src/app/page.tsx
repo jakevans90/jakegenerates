@@ -34,6 +34,16 @@ const calculators = [
   },
   {
     number: "03",
+    question: "What will this job cost and what should I charge?",
+    id: "job-cost-estimator",
+    name: "Job Cost Estimator",
+    description: "Estimate your true job cost, recommended selling price, gross profit, and margin before you quote the work.",
+    features: ["Labor cost & sell rate", "Multiple parts & materials", "Travel, subs, equipment & fees", "Fixed or percentage overhead", "Target-margin or markup pricing", "Proposed-quote comparison", "Browser-local draft recovery"],
+    cta: "Estimate Job Cost",
+    url: "https://job-cost.jakegenerates.com/",
+  },
+  {
+    number: "04",
     question: "What do I need to break even?",
     id: "break-even-calculator",
     name: "Break-Even Calculator",
@@ -43,7 +53,7 @@ const calculators = [
     url: "https://break-even.jakegenerates.com/",
   },
   {
-    number: "04",
+    number: "05",
     question: "What did the job actually make?",
     id: "job-profit-calculator",
     name: "Job Profit Calculator",
@@ -72,7 +82,7 @@ export default function Home() {
     <section className="calculators-section" id="tools" aria-labelledby="calculators-title"><div className="shell">
       <div className="calculator-heading">
         <div><p className="kicker">Free calculators</p><h2 id="calculators-title">Know the numbers<br /><em>behind the job.</em></h2></div>
-        <p>Free calculators for smarter service-business pricing decisions. Use them as much as you need. Start with labor rate, work through markup and break-even, then check the job&apos;s actual profit.</p>
+        <p>Free calculators for service-business pricing and profit decisions. Use them as much as you need. Work from labor rate and markup through job costing, break-even, and final job profit.</p>
       </div>
       <div className="calculator-list">
         {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
