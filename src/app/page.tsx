@@ -38,7 +38,7 @@ const calculators = [
     id: "job-cost-estimator",
     name: "Job Cost Estimator",
     description: "Estimate your true job cost, recommended selling price, gross profit, and margin before you quote the work.",
-    features: ["Labor cost & sell rate", "Multiple parts & materials", "Travel, subs, equipment & fees", "Fixed or percentage overhead", "Target-margin or markup pricing", "Proposed-quote comparison", "Browser-local draft recovery"],
+    features: ["Labor cost & sell rate", "Multiple parts & materials", "Other job costs & overhead", "Margin or markup pricing", "Quote comparison & local draft recovery"],
     cta: "Estimate Job Cost",
     url: "https://job-cost.jakegenerates.com/",
   },
@@ -70,7 +70,7 @@ export default function Home() {
       <div className="hero-content">
         <div className="eyebrow"><span aria-hidden="true" /> Practical software, made by Jake</div>
         <h1>Service work.<br /><em>Done smarter.</em></h1>
-        <p className="hero-copy">Make confident service-business decisions, then turn the work into polished professional documents with focused tools built for the job.</p>
+        <p className="hero-copy">Make confident pricing and profit decisions, then turn service work into polished professional documents.</p>
         <div className="hero-actions">
           <a className="primary-button hero-button" href="#tools">Use a Calculator <span aria-hidden="true">↓</span></a>
           <a className="secondary-button hero-button" href="#generators">Create a Document <span aria-hidden="true">↓</span></a>
@@ -86,7 +86,7 @@ export default function Home() {
       </div>
       <div className="calculator-list">
         {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
-          <div className="calculator-meta"><span>{calculator.number} · Free to use</span><span className="calculator-status"><span aria-hidden="true" /> Ready to use</span></div>
+          <div className="calculator-meta"><span>{calculator.number} · Free to use</span></div>
           <p className="calculator-question">{calculator.question}</p>
           <h3>{calculator.name}</h3>
           <p className="calculator-lead">{calculator.description}</p>
@@ -115,6 +115,5 @@ export default function Home() {
       </div>
     </div></section>
 
-    <section className="coming-soon shell"><p className="kicker">On the workbench</p><div className="coming-grid"><h2>More useful tools,<br /><em>when they&apos;re ready.</em></h2><p>We&apos;re building a small, thoughtful collection—not a crowded toolbox. New tools will earn their place by saving time on real work.</p></div></section>
   </main><SiteFooter /></>;
 }
