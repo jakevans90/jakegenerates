@@ -105,6 +105,46 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .calculator-features li::before { content: "+"; position: absolute; left: 0; color: var(--pink-deep); font-family: var(--font-geist-mono); font-weight: 900; }
 .calculator-button { min-height: 58px; display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: auto; padding: 0 20px; border: 2px solid var(--ink); background: var(--ink); color: white; font-weight: 900; transition: background var(--transition), color var(--transition); }
 .calculator-button:hover { background: var(--pink); color: var(--ink); }
+.professions-section { padding: 105px 0 115px; background: var(--paper); }
+.professions-heading { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 48px; }
+.professions-heading h2, .profession-group-heading h2 { margin: 0; font-family: var(--font-geist-sans); font-size: clamp(2.5rem, 5vw, 4.3rem); line-height: .98; letter-spacing: -.06em; }
+.professions-heading h2 em, .profession-hero h1 em { color: var(--pink-deep); font-style: normal; }
+.professions-heading > p { max-width: 430px; margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.65; }
+.profession-card-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+.profession-card { grid-column: span 2; min-height: 235px; display: flex; flex-direction: column; gap: 16px; padding: 28px; border: 2px solid var(--ink); background: var(--surface); box-shadow: 7px 7px 0 var(--green); transition: transform var(--transition), box-shadow var(--transition); }
+.profession-card:nth-child(4) { grid-column: 2 / span 2; }
+.profession-card:nth-child(5) { grid-column: 4 / span 2; }
+.profession-card:hover { transform: translate(3px, 3px); box-shadow: 4px 4px 0 var(--pink); }
+.profession-card-name { font-family: var(--font-geist-sans); font-size: 1.8rem; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
+.profession-card > span:not(.profession-card-name) { color: var(--muted); line-height: 1.55; }
+.profession-card strong { margin-top: auto; font-family: var(--font-geist-mono); font-size: .76rem; letter-spacing: .05em; text-transform: uppercase; }
+.more-professions { margin: 35px 0 0; color: var(--muted); font-family: var(--font-geist-mono); font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
+.profession-hero { padding: 72px 0 88px; border-bottom: 1px solid var(--border); background: var(--surface-soft); }
+.profession-back { display: inline-flex; gap: 9px; margin-bottom: 52px; border-bottom: 2px solid var(--ink); font-weight: 800; }
+.profession-back:hover { color: var(--pink-deep); border-color: var(--pink-deep); }
+.profession-hero h1 { max-width: 900px; margin: 0; font-family: var(--font-geist-sans); font-size: clamp(3.7rem, 8vw, 7rem); line-height: .9; letter-spacing: -.07em; }
+.profession-intro { max-width: 760px; margin: 34px 0 20px; color: var(--muted); font-size: 1.2rem; line-height: 1.65; }
+.profession-count { display: inline-block; margin: 0; padding: 8px 11px; background: var(--ink); color: var(--green); font-family: var(--font-geist-mono); font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.profession-group { padding: 90px 0 100px; }
+.profession-group + .profession-group { border-top: 1px solid var(--border); }
+.profession-specific { background: var(--ink); color: white; }
+.profession-specific .kicker, .profession-generators .kicker { color: var(--green); }
+.profession-group-heading { margin-bottom: 38px; }
+.profession-tool-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.profession-tool-grid-featured { grid-template-columns: minmax(0, 760px); }
+.profession-tool-card { min-width: 0; min-height: 285px; display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--border); background: var(--surface); box-shadow: 6px 6px 0 var(--green); }
+.profession-tool-card h3 { margin: 0 0 16px; font-family: var(--font-geist-sans); font-size: 1.8rem; line-height: 1.05; letter-spacing: -.045em; }
+.profession-tool-card p { margin: 0 0 24px; color: var(--muted); line-height: 1.6; }
+.profession-tool-card a { display: inline-flex; justify-content: space-between; gap: 18px; margin-top: auto; padding-top: 17px; border-top: 2px solid var(--ink); font-weight: 900; }
+.profession-tool-card a:hover { color: var(--pink-deep); }
+.profession-tool-card-featured { min-height: 260px; border: 2px solid var(--green); box-shadow: 7px 7px 0 var(--pink); }
+.profession-tool-label { color: var(--green-deep) !important; font-family: var(--font-geist-mono); font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.profession-generators { background: var(--ink); color: white; }
+.profession-generators .profession-tool-card { border-color: #424847; background: var(--ink-soft); box-shadow: 6px 6px 0 var(--pink); }
+.profession-generators .profession-tool-card h3 { color: white; }
+.profession-generators .profession-tool-card p { color: #b8c0bd; }
+.profession-generators .profession-tool-card a { border-color: var(--green); color: var(--green); }
+.profession-coming { max-width: 680px; margin: 42px 0 0; color: #b8c0bd; }
 .site-footer { background: var(--ink); color: #ccd2cf; border-top: 4px solid var(--green); }
 .footer-top { min-height: 190px; padding-block: 45px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
 .footer-logo { height: 56px; } .footer-top p { margin: 12px 0 0; }
@@ -132,6 +172,9 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
   .tool-card { min-height: 0; }
   .calculator-list { grid-template-columns: 1fr; }
   .calculator-card, .calculator-list > :only-child, .calculator-list > :nth-child(4):nth-last-child(2), .calculator-list > :nth-child(5):last-child { grid-column: auto; }
+  .profession-card-grid, .profession-tool-grid { grid-template-columns: 1fr; }
+  .profession-card, .profession-card:nth-child(4), .profession-card:nth-child(5) { grid-column: auto; }
+  .profession-card { min-height: 0; }
 }
 @media (max-width: 1100px) and (min-width: 851px) {
   .workflow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 16px; }
@@ -144,6 +187,11 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
   .calculator-card { grid-column: span 2; }
   .calculator-list > :nth-child(4):nth-last-child(2) { grid-column: span 2; }
   .calculator-list > :nth-child(5):last-child { grid-column: 2 / span 2; }
+  .profession-card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .profession-card { grid-column: span 2; }
+  .profession-card:nth-child(4) { grid-column: span 2; }
+  .profession-card:nth-child(5) { grid-column: 2 / span 2; }
+  .profession-tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 850px) and (min-width: 621px) {
   .workflow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 16px; }
@@ -162,6 +210,7 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
   .section-heading h2 { font-size: clamp(1.85rem, 7.5vw, 2.25rem); overflow-wrap: anywhere; }
   .section-heading { align-items: start; flex-direction: column; gap: 25px; }
   .calculator-heading { align-items: start; flex-direction: column; gap: 25px; }
+  .professions-heading { align-items: start; flex-direction: column; gap: 25px; }
   .calculator-heading h2 { font-size: clamp(1.85rem, 7.5vw, 2.25rem); overflow-wrap: anywhere; }
   .calculator-card { box-shadow: 6px 6px 0 var(--green); }
   .calculator-card { min-height: 0; padding: 27px 22px; }
@@ -180,6 +229,13 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
   .tool-content h3 { font-size: clamp(1.7rem, 7.2vw, 2rem); overflow-wrap: anywhere; }
   .primary-button { width: 100%; }
   .tools-section { padding-block: 70px 85px; } .calculators-section { padding-block: 76px 84px; }
+  .professions-section, .profession-group { padding-block: 76px 84px; }
+  .professions-heading h2, .profession-group-heading h2 { font-size: clamp(1.85rem, 7.5vw, 2.25rem); }
+  .profession-card, .profession-tool-card { padding: 24px 21px; }
+  .profession-hero { padding: 48px 0 68px; }
+  .profession-back { margin-bottom: 38px; }
+  .profession-hero h1 { font-size: clamp(3rem, 15vw, 4.25rem); }
+  .profession-intro { font-size: 1.05rem; }
   .footer-top { align-items: start; flex-direction: column; } .site-footer nav { gap: 18px; flex-wrap: wrap; }
   .footer-bottom { align-items: start; flex-direction: column; justify-content: center; gap: 7px; }
   .info-page { padding-block: 70px 90px; }

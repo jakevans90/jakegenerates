@@ -1,68 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import { calculators, generators as tools, professions } from "@/data/tools";
 import heroLogo from "../../public/brand/jg-circle.png";
-
-const tools = [
-  { number: "01", id: "service-quote-generator", name: "Service Quote Generator", value: "Price the work and send a polished quote.", description: "Build itemized service quotes with your branding, clear totals, and a professional PDF ready to share.", features: ["Parts & labor", "Pricing & tax", "Branded PDF"], cta: "Create a Quote", url: "https://service-quotes.jakegenerates.com/" },
-  { number: "02", id: "service-agreement-generator", name: "Service Agreement Generator", value: "Set recurring service expectations clearly.", description: "Create a clear, professional recurring-service agreement for maintenance and support work.", features: ["Coverage & exclusions", "Flexible service pricing", "Renewal & termination terms", "Branded PDF"], cta: "Create a Service Agreement", url: "https://service-agreements.jakegenerates.com/" },
-  { number: "03", id: "change-order-generator", name: "Change Order Generator", value: "Keep scope and price changes clear.", description: "Document additions or deductions, show the revised job total, and capture an approval in one clean PDF.", features: ["Add & deduct", "Revised total", "Approval section"], cta: "Create a Change Order", url: "https://change-orders.jakegenerates.com/" },
-  { number: "04", id: "service-report-generator", name: "Service Report Generator", value: "Turn field notes into a client-ready report.", description: "Organize the work performed, findings, and recommendations into a consistent professional record.", features: ["Work performed", "Findings", "Professional PDF"], cta: "Create a Service Report", url: process.env.NEXT_PUBLIC_SERVICE_REPORT_URL || "https://service-reports.jakegenerates.com" },
-  { number: "05", id: "service-invoice-generator", name: "Service Invoice Generator", value: "Turn completed work into a clear invoice.", description: "Create an itemized service invoice with payment details, balance due, your branding, and a shareable PDF.", features: ["Parts & labor", "Payment tracking", "Branded PDF"], cta: "Create an Invoice", url: "https://service-invoices.jakegenerates.com/" },
-];
-
-const calculators = [
-  {
-    number: "01",
-    question: "What should I charge?",
-    id: "labor-rate-calculator",
-    name: "Labor Rate Calculator",
-    description: "Find the hourly rate you need to charge to cover labor, overhead, non-billable time, and your target margin.",
-    features: ["Loaded labor cost", "Billable utilization", "Overhead per billable hour", "Break-even & target-margin rates", "Current-rate comparison", "Browser-local draft recovery"],
-    cta: "Calculate Labor Rate",
-    url: "https://labor-rate.jakegenerates.com/",
-  },
-  {
-    number: "02",
-    question: "How should I price parts and labor?",
-    id: "parts-labor-markup-calculator",
-    name: "Parts & Labor Markup Calculator",
-    description: "Turn cost into a selling price and compare markup, margin, and target-margin pricing before you quote the job.",
-    features: ["Parts & labor pricing", "Markup vs. margin", "Three pricing modes", "Combined scenario & local drafts"],
-    cta: "Calculate Markup & Margin",
-    url: "https://markup.jakegenerates.com/",
-  },
-  {
-    number: "03",
-    question: "What will this job cost and what should I charge?",
-    id: "job-cost-estimator",
-    name: "Job Cost Estimator",
-    description: "Estimate your true job cost, recommended selling price, gross profit, and margin before you quote the work.",
-    features: ["Labor cost & sell rate", "Multiple parts & materials", "Other job costs & overhead", "Margin or markup pricing", "Quote comparison & local draft recovery"],
-    cta: "Estimate Job Cost",
-    url: "https://job-cost.jakegenerates.com/",
-  },
-  {
-    number: "04",
-    question: "What do I need to break even?",
-    id: "break-even-calculator",
-    name: "Break-Even Calculator",
-    description: "See how many jobs, how much revenue, or how many billable hours you need to cover costs and hit a profit target.",
-    features: ["Per-job break-even", "Billable-hours break-even", "Contribution margin", "Target-profit jobs, hours & revenue", "Local draft recovery"],
-    cta: "Calculate Break-Even",
-    url: "https://break-even.jakegenerates.com/",
-  },
-  {
-    number: "05",
-    question: "What did the job actually make?",
-    id: "job-profit-calculator",
-    name: "Job Profit Calculator",
-    description: "See what a job actually made after labor, parts, subcontractors, travel, processing fees, and overhead.",
-    features: ["Full job cost", "Profit & margin", "Break-even revenue", "Target pricing"],
-    cta: "Calculate Job Profit",
-    url: "https://job-profit.jakegenerates.com/",
-  },
-];
 
 export default function Home() {
   return <><SiteHeader /><main>
@@ -85,8 +26,8 @@ export default function Home() {
         <p>Free calculators for service-business pricing and profit decisions. Use them as much as you need. Work from labor rate and markup through job costing, break-even, and final job profit.</p>
       </div>
       <div className="calculator-list">
-        {calculators.map((calculator) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
-          <div className="calculator-meta"><span>{calculator.number} · Free to use</span></div>
+        {calculators.map((calculator, index) => <article className="calculator-card" id={calculator.id} key={calculator.id}>
+          <div className="calculator-meta"><span>{String(index + 1).padStart(2, "0")} · Free to use</span></div>
           <p className="calculator-question">{calculator.question}</p>
           <h3>{calculator.name}</h3>
           <p className="calculator-lead">{calculator.description}</p>
@@ -107,12 +48,22 @@ export default function Home() {
         </ol>
       </div>
       <div className="tool-list">
-        {tools.map((tool) => <article className="tool-card" id={tool.id} key={tool.id}>
-          <div className="tool-card-top"><span className="tool-number">{tool.number}</span><span className="status"><span aria-hidden="true" /> Ready to use</span></div>
+        {tools.map((tool, index) => <article className="tool-card" id={tool.id} key={tool.id}>
+          <div className="tool-card-top"><span className="tool-number">{String(index + 1).padStart(2, "0")}</span><span className="status"><span aria-hidden="true" /> Ready to use</span></div>
           <div className="tool-content"><h3>{tool.name}</h3><p className="tool-value">{tool.value}</p><p>{tool.description}</p><ul className="tool-tags" aria-label={`${tool.name} highlights`}>{tool.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div>
           <a className="primary-button" href={tool.url} target="_blank" rel="noreferrer">{tool.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
         </article>)}
       </div>
+    </div></section>
+
+    <section className="professions-section" id="professions" aria-labelledby="professions-title"><div className="shell">
+      <div className="professions-heading"><div><p className="kicker">Tools by profession</p><h2 id="professions-title">Find what fits<br /><em>your work.</em></h2></div><p>Start with the calculators and documents that make sense for your trade. One useful tool can serve more than one kind of business.</p></div>
+      <div className="profession-card-grid">
+        {professions.map((profession) => <Link className="profession-card" href={`/professions/${profession.slug}`} key={profession.slug}>
+          <span className="profession-card-name">{profession.name}</span><span>{profession.cardDescription}</span><strong>View tools <span aria-hidden="true">→</span></strong>
+        </Link>)}
+      </div>
+      <p className="more-professions">More professions coming as the collection grows.</p>
     </div></section>
 
   </main><SiteFooter /></>;

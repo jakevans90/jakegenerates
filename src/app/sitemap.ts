@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { professions } from "@/data/tools";
 
 const siteUrl = "https://jakegenerates.com";
 
@@ -29,5 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    ...professions.map(({ slug }) => ({
+      url: `${siteUrl}/professions/${slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }

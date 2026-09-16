@@ -5,6 +5,7 @@ import "./globals.css";
 const GA_MEASUREMENT_ID = "G-DW36H2JDZ2";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jakegenerates.com"),
   title: { default: "JakeGenerates — Practical tools for repetitive work", template: "%s | JakeGenerates" },
   description: "Free calculators for service-business pricing, job costing, break-even, and profit decisions, plus professional document generators.",
   icons: {
