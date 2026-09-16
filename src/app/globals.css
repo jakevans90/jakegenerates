@@ -138,6 +138,8 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .profession-tool-card a { display: inline-flex; justify-content: space-between; gap: 18px; margin-top: auto; padding-top: 17px; border-top: 2px solid var(--ink); font-weight: 900; }
 .profession-tool-card a:hover { color: var(--pink-deep); }
 .profession-tool-card-featured { min-height: 260px; border: 2px solid var(--green); box-shadow: 7px 7px 0 var(--pink); }
+.profession-tool-card-featured a { min-height: 56px; align-items: center; justify-content: space-between; padding: 12px 18px; border: 2px solid var(--ink); background: var(--green); color: var(--ink); transition: background var(--transition), color var(--transition); }
+.profession-tool-card-featured a:hover { background: var(--ink); color: var(--green); }
 .profession-tool-label { color: var(--green-deep) !important; font-family: var(--font-geist-mono); font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .profession-generators { background: var(--ink); color: white; }
 .profession-generators .profession-tool-card { border-color: #424847; background: var(--ink-soft); box-shadow: 6px 6px 0 var(--pink); }
