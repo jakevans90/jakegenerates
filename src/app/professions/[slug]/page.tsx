@@ -41,8 +41,8 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
     </div></section>
 
     {specificTools.length > 0 && <section className="profession-group profession-specific"><div className="shell">
-      <div className="profession-group-heading"><p className="kicker">Made for {profession.name}</p><h2>Trade-specific tools</h2></div>
-      <div className="profession-tool-grid profession-tool-grid-featured">{specificTools.map((tool) => <ProfessionToolCard tool={tool} featured key={tool.id} />)}</div>
+      <div className="profession-group-heading"><p className="kicker">Made for {profession.name}</p><h2>{profession.specificToolsTitle ?? "Trade-specific tools"}</h2></div>
+      <div className="profession-tool-grid profession-tool-grid-featured">{specificTools.map((tool) => <ProfessionToolCard tool={tool} featured featuredLabel={`${profession.name}-specific`} key={tool.id} />)}</div>
     </div></section>}
 
     <section className="profession-group"><div className="shell">
