@@ -124,12 +124,14 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .profession-back:hover { color: var(--pink-deep); border-color: var(--pink-deep); }
 .profession-hero h1 { max-width: 900px; margin: 0; font-family: var(--font-geist-sans); font-size: clamp(3.7rem, 8vw, 7rem); line-height: .9; letter-spacing: -.07em; }
 .profession-intro { max-width: 760px; margin: 34px 0 20px; color: var(--muted); font-size: 1.2rem; line-height: 1.65; }
+.profession-journey { max-width: 760px; margin: -4px 0 20px; color: var(--ink); font-weight: 700; line-height: 1.55; }
 .profession-count { display: inline-block; margin: 0; padding: 8px 11px; background: var(--ink); color: var(--green); font-family: var(--font-geist-mono); font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .profession-group { padding: 90px 0 100px; }
 .profession-group + .profession-group { border-top: 1px solid var(--border); }
 .profession-specific { background: var(--ink); color: white; }
 .profession-specific .kicker, .profession-generators .kicker { color: var(--green); }
 .profession-group-heading { margin-bottom: 38px; }
+.profession-group-heading > p:last-child:not(.kicker) { max-width: 680px; margin: 14px 0 0; color: var(--muted); line-height: 1.6; }
 .profession-tool-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .profession-tool-grid-featured { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .profession-tool-card { min-width: 0; min-height: 285px; display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--border); background: var(--surface); box-shadow: 6px 6px 0 var(--green); }

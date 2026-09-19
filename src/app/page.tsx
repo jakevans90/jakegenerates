@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 import { calculators, generators as tools, professions } from "@/data/tools";
 import heroLogo from "../../public/brand/jg-circle.png";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
   return <><SiteHeader /><main>

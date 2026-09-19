@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/site-shell";
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata: Metadata = { title: "Privacy", alternates: { canonical: "/privacy" } };
 export default function PrivacyPage() {
   return (
     <InfoPage eyebrow="Legal" title="Privacy policy">

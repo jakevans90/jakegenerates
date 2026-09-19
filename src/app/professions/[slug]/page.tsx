@@ -37,6 +37,7 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
       <p className="kicker">Tools by profession</p>
       <h1>Tools for<br /><em>{profession.name}.</em></h1>
       <p className="profession-intro">{profession.description}</p>
+      <p className="profession-journey">{specificTools.length > 0 ? "Start with trade-specific pricing, check the wider business math with the general calculators, then turn final numbers into customer-ready documents." : "Start with the pricing calculators, then turn final numbers into customer-ready documents for the job."}</p>
       <p className="profession-count">{professionTools.length} free tools available now</p>
     </div></section>
 
@@ -46,12 +47,12 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
     </div></section>}
 
     <section className="profession-group"><div className="shell">
-      <div className="profession-group-heading"><p className="kicker">Pricing &amp; profit</p><h2>Calculators</h2></div>
+      <div className="profession-group-heading"><p className="kicker">Pricing &amp; profit</p><h2>Calculators</h2><p>Use these to set rates, price the job, and check the result.</p></div>
       <div className="profession-tool-grid">{calculators.map((tool) => <ProfessionToolCard tool={tool} key={tool.id} />)}</div>
     </div></section>
 
     <section className="profession-group profession-generators"><div className="shell">
-      <div className="profession-group-heading"><p className="kicker">Customer-ready paperwork</p><h2>Document generators</h2></div>
+      <div className="profession-group-heading"><p className="kicker">Customer-ready paperwork</p><h2>Document generators</h2><p>Once the numbers are settled, create the document the customer needs.</p></div>
       <div className="profession-tool-grid">{generators.map((tool) => <ProfessionToolCard tool={tool} key={tool.id} />)}</div>
       {!specificTools.length && <p className="profession-coming">More profession-specific tools are coming. The tools above are ready to use today.</p>}
     </div></section>
