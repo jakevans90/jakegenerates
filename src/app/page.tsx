@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import { TrackedToolLink } from "@/components/tracked-tool-link";
 import { calculators, generators as tools, professions } from "@/data/tools";
 import heroLogo from "../../public/brand/jg-circle.png";
 
@@ -37,7 +38,7 @@ export default function Home() {
           <ul className="calculator-features" aria-label={`${calculator.name} highlights`}>
             {calculator.features.map((feature) => <li key={feature}>{feature}</li>)}
           </ul>
-          <a className="calculator-button" href={calculator.url} target="_blank" rel="noreferrer">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
+          <TrackedToolLink className="calculator-button" href={calculator.url} toolName={calculator.name} toolCategory="calculator">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
         </article>)}
       </div>
     </div></section>
@@ -54,7 +55,7 @@ export default function Home() {
         {tools.map((tool, index) => <article className="tool-card" id={tool.id} key={tool.id}>
           <div className="tool-card-top"><span className="tool-number">{String(index + 1).padStart(2, "0")}</span><span className="status"><span aria-hidden="true" /> Ready to use</span></div>
           <div className="tool-content"><h3>{tool.name}</h3><p className="tool-value">{tool.value}</p><p>{tool.description}</p><ul className="tool-tags" aria-label={`${tool.name} highlights`}>{tool.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div>
-          <a className="primary-button" href={tool.url} target="_blank" rel="noreferrer">{tool.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
+          <TrackedToolLink className="primary-button" href={tool.url} toolName={tool.name} toolCategory="generator">{tool.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
         </article>)}
       </div>
     </div></section>
