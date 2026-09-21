@@ -13,17 +13,23 @@ type Props = {
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
 export function TrackedToolLink({ href, className, toolName, toolCategory, children }: Props) {
   function trackClick() {
-    window.gtag?.("event", "tool_click", {
+    const params = {
       tool_name: toolName,
       tool_category: toolCategory,
       destination: href,
       source_page: "homepage",
-    });
+    };
+    if (window.gtag) window.gtag("event", "tool_click", params);
+    else {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(["event", "tool_click", params]);
+    }
   }
 
   return (
