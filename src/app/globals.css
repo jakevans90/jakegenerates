@@ -105,6 +105,9 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .calculator-features li::before { content: "+"; position: absolute; left: 0; color: var(--pink-deep); font-family: var(--font-geist-mono); font-weight: 900; }
 .calculator-button { min-height: 58px; display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: auto; padding: 0 20px; border: 2px solid var(--ink); background: var(--ink); color: white; font-weight: 900; transition: background var(--transition), color var(--transition); }
 .calculator-button:hover { background: var(--pink); color: var(--ink); }
+.calculator-trade-link { margin: 34px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+.calculator-trade-link a { color: var(--ink); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.calculator-trade-link a:hover { color: var(--pink-deep); }
 .professions-section { padding: 105px 0 115px; background: var(--paper); }
 .professions-heading { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 48px; }
 .professions-heading h2, .profession-group-heading h2 { margin: 0; font-family: var(--font-geist-sans); font-size: clamp(2.5rem, 5vw, 4.3rem); line-height: .98; letter-spacing: -.06em; }
