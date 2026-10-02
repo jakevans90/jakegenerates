@@ -41,6 +41,7 @@ export default function Home() {
           <TrackedToolLink className="calculator-button" href={calculator.url} toolName={calculator.name} toolCategory="calculator">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
         </article>)}
       </div>
+      <p className="calculator-trade-link">Pricing an HVAC replacement? <TrackedToolLink href="https://hvac-replacement.jakegenerates.com/" toolName="HVAC Replacement Estimate Calculator" toolCategory="calculator">Estimate equipment, labor, overhead, and your selling price with the HVAC Replacement Estimate Calculator <span aria-hidden="true">↗</span></TrackedToolLink></p>
     </div></section>
 
     <section className="tools-section" id="generators" aria-labelledby="generators-title"><div className="shell">
