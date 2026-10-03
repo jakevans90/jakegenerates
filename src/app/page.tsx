@@ -41,6 +41,14 @@ export default function Home() {
           <TrackedToolLink className="calculator-button" href={calculator.url} toolName={calculator.name} toolCategory="calculator">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
         </article>)}
       </div>
+      <article className="calculator-featured-link" aria-labelledby="maintenance-calculator-title">
+        <div>
+          <p className="kicker">Featured HVAC calculator</p>
+          <h3 id="maintenance-calculator-title">Build a maintenance agreement price that recovers the full annual cost.</h3>
+          <p>Use scheduled visits, loaded technician cost, travel, supplies, administration, overhead, and target gross margin to calculate annual and monthly pricing.</p>
+        </div>
+        <TrackedToolLink className="calculator-button" href="https://hvac-maintenance.jakegenerates.com/" toolName="HVAC Maintenance Agreement Pricing Calculator" toolCategory="calculator">Open the HVAC Maintenance Agreement Pricing Calculator <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
+      </article>
       <p className="calculator-trade-link">Pricing an HVAC replacement? <TrackedToolLink href="https://hvac-replacement.jakegenerates.com/" toolName="HVAC Replacement Estimate Calculator" toolCategory="calculator">Estimate equipment, labor, overhead, and your selling price with the HVAC Replacement Estimate Calculator <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink></p>
     </div></section>
 
