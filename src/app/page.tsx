@@ -41,13 +41,13 @@ export default function Home() {
           <TrackedToolLink className="calculator-button" href={calculator.url} toolName={calculator.name} toolCategory="calculator">{calculator.cta} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
         </article>)}
       </div>
-      <article className="calculator-featured-link" aria-labelledby="maintenance-calculator-title">
+      <article className="calculator-featured-link" aria-labelledby="flat-rate-calculator-title">
         <div>
           <p className="kicker">Featured HVAC calculator</p>
-          <h3 id="maintenance-calculator-title">Build a maintenance agreement price that recovers the full annual cost.</h3>
-          <p>Use scheduled visits, loaded technician cost, travel, supplies, administration, overhead, and target gross margin to calculate annual and monthly pricing.</p>
+          <h3 id="flat-rate-calculator-title">Set a repeatable price-book amount for an individual HVAC repair task.</h3>
+          <p>Use book time, internal labor cost, parts pricing, overhead, callback reserve, and margin or markup—without mixing in the trip or diagnostic fee.</p>
         </div>
-        <TrackedToolLink className="calculator-button" href="https://hvac-maintenance.jakegenerates.com/" toolName="HVAC Maintenance Agreement Pricing Calculator" toolCategory="calculator">Open the HVAC Maintenance Agreement Pricing Calculator <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
+        <TrackedToolLink className="calculator-button" href="https://hvac-flat-rate.jakegenerates.com/" toolName="HVAC Flat Rate Repair Pricing Calculator" toolCategory="calculator">Open the HVAC Flat Rate Repair Pricing Calculator <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink>
       </article>
       <p className="calculator-trade-link">Pricing an HVAC replacement? <TrackedToolLink href="https://hvac-replacement.jakegenerates.com/" toolName="HVAC Replacement Estimate Calculator" toolCategory="calculator">Estimate equipment, labor, overhead, and your selling price with the HVAC Replacement Estimate Calculator <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></TrackedToolLink></p>
     </div></section>
