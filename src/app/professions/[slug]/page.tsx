@@ -46,6 +46,11 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
       <div className="profession-tool-grid profession-tool-grid-featured">{specificTools.map((tool) => <ProfessionToolCard tool={tool} featured featuredLabel={`${profession.name}-specific`} key={tool.id} />)}</div>
     </div></section>}
 
+    {profession.slug === "hvac" && <section className="profession-guide"><div className="shell profession-guide-inner">
+      <div><p className="kicker">HVAC pricing guide</p><h2>How to Price an HVAC Service Call</h2><p>Build a diagnostic fee from loaded labor, travel, dispatch, overhead, minimums, and after-hours costs—then keep it separate from the repair price.</p></div>
+      <Link className="calculator-button" href="/guides/how-to-price-an-hvac-service-call">Read the service-call pricing guide <span aria-hidden="true">→</span></Link>
+    </div></section>}
+
     <section className="profession-group"><div className="shell">
       <div className="profession-group-heading"><p className="kicker">Pricing &amp; profit</p><h2>Calculators</h2><p>Use these to set rates, price the job, and check the result.</p></div>
       <div className="profession-tool-grid">{calculators.map((tool) => <ProfessionToolCard tool={tool} key={tool.id} />)}</div>
