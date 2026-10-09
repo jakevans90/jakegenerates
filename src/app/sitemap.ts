@@ -4,6 +4,7 @@ import { professions } from "@/data/tools";
 const siteUrl = "https://jakegenerates.com";
 const serviceCallGuidePublished = new Date("2026-10-09T00:00:00.000Z");
 const maintenanceAgreementGuidePublished = new Date("2026-10-09T00:00:00.000Z");
+const markupMarginGuidePublished = new Date("2026-10-09T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -41,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteUrl}/guides/how-to-price-an-hvac-maintenance-agreement`,
       lastModified: maintenanceAgreementGuidePublished,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/guides/markup-vs-margin-for-contractors`,
+      lastModified: markupMarginGuidePublished,
       changeFrequency: "monthly",
       priority: 0.8,
     },
