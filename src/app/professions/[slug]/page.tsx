@@ -47,8 +47,11 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
     </div></section>}
 
     {profession.slug === "hvac" && <section className="profession-guide"><div className="shell profession-guide-inner">
-      <div><p className="kicker">HVAC pricing guide</p><h2>How to Price an HVAC Service Call</h2><p>Build a diagnostic fee from loaded labor, travel, dispatch, overhead, minimums, and after-hours costs—then keep it separate from the repair price.</p></div>
-      <Link className="calculator-button" href="/guides/how-to-price-an-hvac-service-call">Read the service-call pricing guide <span aria-hidden="true">→</span></Link>
+      <div><p className="kicker">HVAC pricing guides</p><h2>Price recurring work and service calls with confidence.</h2><p>Use practical frameworks for maintenance agreements and diagnostic visits, then run your own costs through the matching calculator.</p></div>
+      <div className="profession-guide-actions">
+        <Link className="calculator-button" href="/guides/how-to-price-an-hvac-maintenance-agreement">Read the maintenance-agreement guide <span aria-hidden="true">→</span></Link>
+        <Link className="calculator-button" href="/guides/how-to-price-an-hvac-service-call">Read the service-call pricing guide <span aria-hidden="true">→</span></Link>
+      </div>
     </div></section>}
 
     <section className="profession-group"><div className="shell">

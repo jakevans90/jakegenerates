@@ -333,6 +333,7 @@ a:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 .profession-guide h2 { margin: 0 0 13px; font-family: var(--font-geist-sans); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; letter-spacing: -.05em; }
 .profession-guide p:last-child { max-width: 690px; margin: 0; color: #303635; line-height: 1.65; }
 .profession-guide .calculator-button { min-height: 70px; }
+.profession-guide-actions { display: grid; gap: 12px; }
 
 @media (max-width: 850px) {
   .guide-layout { grid-template-columns: 1fr; gap: 42px; }
