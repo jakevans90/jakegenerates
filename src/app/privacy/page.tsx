@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/site-shell";
-export const metadata: Metadata = { title: "Privacy", alternates: { canonical: "/privacy" } };
+import { createPageMetadata } from "@/lib/site-metadata";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy",
+  description: "Read how JakeGenerates handles website analytics, hosting logs, emails, external links, and information entered into its tools.",
+  path: "/privacy",
+});
 export default function PrivacyPage() {
   return (
     <InfoPage eyebrow="Legal" title="Privacy policy">

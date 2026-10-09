@@ -2,25 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import { SITE_NAME, SITE_URL, SOCIAL_IMAGE } from "@/lib/site-metadata";
 
-const pageUrl = "https://jakegenerates.com/guides/how-to-price-an-hvac-service-call";
+const pageUrl = `${SITE_URL}/guides/how-to-price-an-hvac-service-call`;
 const publishedDate = "2026-10-09";
+const pageTitle = "How to Price an HVAC Service Call";
+const pageDescription =
+  "Learn how to set a profitable HVAC service-call fee using loaded labor, dispatch, overhead, minimum charges, after-hours premiums, parts, and tax.";
 
 export const metadata: Metadata = {
-  title: "How to Price an HVAC Service Call",
-  description:
-    "Learn how to set a profitable HVAC service-call fee using loaded labor, dispatch, overhead, minimum charges, after-hours premiums, parts, and tax.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/guides/how-to-price-an-hvac-service-call" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "article",
     url: pageUrl,
-    title: "How to Price an HVAC Service Call",
+    title: pageTitle,
     description:
       "A practical pricing framework for HVAC diagnostic fees, trip charges, minimums, after-hours work, loaded labor, and overhead.",
-    siteName: "JakeGenerates",
+    siteName: SITE_NAME,
     publishedTime: publishedDate,
     modifiedTime: publishedDate,
+    images: [SOCIAL_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: [SOCIAL_IMAGE],
   },
 };
 
@@ -66,12 +76,12 @@ const articleSchema = {
   datePublished: publishedDate,
   dateModified: publishedDate,
   mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-  author: { "@type": "Organization", name: "JakeGenerates", url: "https://jakegenerates.com/" },
+  author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
   publisher: {
     "@type": "Organization",
-    name: "JakeGenerates",
-    url: "https://jakegenerates.com/",
-    logo: { "@type": "ImageObject", url: "https://jakegenerates.com/brand/jakegenerates-logo.png" },
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    logo: { "@type": "ImageObject", url: SOCIAL_IMAGE.url },
   },
 };
 
@@ -89,8 +99,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://jakegenerates.com/" },
-    { "@type": "ListItem", position: 2, name: "HVAC tools", item: "https://jakegenerates.com/professions/hvac" },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "HVAC tools", item: `${SITE_URL}/professions/hvac` },
     { "@type": "ListItem", position: 3, name: "How to Price an HVAC Service Call", item: pageUrl },
   ],
 };

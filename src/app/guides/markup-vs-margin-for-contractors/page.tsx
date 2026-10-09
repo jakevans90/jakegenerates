@@ -2,25 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import { SITE_NAME, SITE_URL, SOCIAL_IMAGE } from "@/lib/site-metadata";
 
-const pageUrl = "https://jakegenerates.com/guides/markup-vs-margin-for-contractors";
+const pageUrl = `${SITE_URL}/guides/markup-vs-margin-for-contractors`;
 const publishedDate = "2026-10-09";
+const pageTitle = "Markup vs. Margin for Contractors: Formulas & Examples";
+const pageDescription =
+  "Learn the difference between markup and gross margin, convert between them, and price contractor parts and labor with practical formulas and examples.";
 
 export const metadata: Metadata = {
-  title: "Markup vs. Margin for Contractors: Formulas & Examples",
-  description:
-    "Learn the difference between markup and gross margin, convert between them, and price contractor parts and labor with practical formulas and examples.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/guides/markup-vs-margin-for-contractors" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "article",
     url: pageUrl,
-    title: "Markup vs. Margin for Contractors: Formulas & Examples",
+    title: pageTitle,
     description:
       "A practical guide to contractor markup, gross margin, conversion formulas, parts and labor pricing, overhead, and profitable selling prices.",
-    siteName: "JakeGenerates",
+    siteName: SITE_NAME,
     publishedTime: publishedDate,
     modifiedTime: publishedDate,
+    images: [SOCIAL_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+    images: [SOCIAL_IMAGE],
   },
 };
 
@@ -71,12 +81,12 @@ const articleSchema = {
   datePublished: publishedDate,
   dateModified: publishedDate,
   mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-  author: { "@type": "Organization", name: "JakeGenerates", url: "https://jakegenerates.com/" },
+  author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
   publisher: {
     "@type": "Organization",
-    name: "JakeGenerates",
-    url: "https://jakegenerates.com/",
-    logo: { "@type": "ImageObject", url: "https://jakegenerates.com/brand/jakegenerates-logo.png" },
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    logo: { "@type": "ImageObject", url: SOCIAL_IMAGE.url },
   },
 };
 
@@ -94,7 +104,7 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://jakegenerates.com/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
     { "@type": "ListItem", position: 2, name: "Markup vs. Margin for Contractors", item: pageUrl },
   ],
 };

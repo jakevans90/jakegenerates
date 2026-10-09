@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ProfessionToolCard } from "@/components/profession-tool-card";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 import { getProfession, getToolsForProfession, professions } from "@/data/tools";
+import { createPageMetadata } from "@/lib/site-metadata";
 
 type ProfessionPageProps = { params: Promise<{ slug: string }> };
 
@@ -15,11 +16,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ProfessionPageProps): Promise<Metadata> {
   const profession = getProfession((await params).slug);
   if (!profession) return {};
-  return {
+  return createPageMetadata({
     title: `Tools for ${profession.name}`,
     description: profession.metaDescription,
-    alternates: { canonical: `/professions/${profession.slug}` },
-  };
+    path: `/professions/${profession.slug}`,
+  });
 }
 
 export default async function ProfessionPage({ params }: ProfessionPageProps) {
