@@ -25,11 +25,13 @@ export function TrackedToolLink({ href, className, toolName, toolCategory, child
       destination: href,
       source_page: "homepage",
     };
-    if (window.gtag) window.gtag("event", "tool_click", params);
-    else {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(["event", "tool_click", params]);
-    }
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      // GA consumes Arguments command objects; an Array is not a gtag command.
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer!.push(arguments);
+    };
+    window.gtag("event", "tool_click", params);
   }
 
   return (
