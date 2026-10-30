@@ -8,6 +8,7 @@ const serviceCallGuidePublished = new Date("2026-10-09T00:00:00.000Z");
 const maintenanceAgreementGuidePublished = new Date("2026-10-09T00:00:00.000Z");
 const markupMarginGuidePublished = new Date("2026-10-09T00:00:00.000Z");
 const diagnosticFeeGuidePublished = new Date("2026-10-30T00:00:00.000Z");
+const flatRatePricingGuidePublished = new Date("2026-10-30T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -50,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${SITE_URL}/guides/hvac-diagnostic-fee-vs-service-call-fee`,
       lastModified: diagnosticFeeGuidePublished,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/guides/how-hvac-flat-rate-pricing-works`,
+      lastModified: flatRatePricingGuidePublished,
       changeFrequency: "monthly",
       priority: 0.8,
     },

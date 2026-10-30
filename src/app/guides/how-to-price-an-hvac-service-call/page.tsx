@@ -230,7 +230,7 @@ export default function HvacServiceCallPricingGuide() {
                   The diagnostic fee covers the initial visit and the professional work required to identify the likely fault. The repair price covers the corrective work after authorization. That second price may include additional labor, parts, materials, refrigerant, equipment, permits, disposal, warranty reserve, overhead, and profit.
                 </p>
                 <p>
-                  For repeatable repairs, move the approved work into a consistent price book with the <a href="https://hvac-flat-rate.jakegenerates.com/">HVAC Flat Rate Repair Pricing Calculator</a>. Keeping the service call separate prevents travel and diagnosis from being hidden inside every repair task.
+                  For repeatable repairs, move the approved work into a consistent price book with the <a href="https://hvac-flat-rate.jakegenerates.com/">HVAC Flat Rate Repair Pricing Calculator</a>. The guide to <Link href="/guides/how-hvac-flat-rate-pricing-works">how HVAC flat-rate pricing works</Link> explains the task-level book time, labor, parts, overhead, reserve, and margin logic. Keeping the service call separate prevents travel and diagnosis from being hidden inside every repair task.
                 </p>
               </section>
 

@@ -340,7 +340,7 @@ export default function HvacDiagnosticFeeVsServiceCallFeeGuide() {
                 <p className="guide-section-number">10</p>
                 <h2>Connect the policy to the rest of the service workflow</h2>
                 <p>
-                  Use the <Link href="/guides/how-to-price-an-hvac-service-call">service-call pricing guide</Link> to calculate the broader economics, the <a href="https://hvac-flat-rate.jakegenerates.com/">HVAC Flat Rate Repair Pricing Calculator</a> to price repeatable repair tasks, and the <a href="https://job-profit.jakegenerates.com/">Job Profit Calculator</a> to compare the policy with completed work. Find those tools, replacement and maintenance calculators, and customer-ready document generators on the <Link href="/professions/hvac">HVAC tools hub</Link>.
+                  Use the <Link href="/guides/how-to-price-an-hvac-service-call">service-call pricing guide</Link> to calculate the broader visit economics, then read <Link href="/guides/how-hvac-flat-rate-pricing-works">how HVAC flat-rate pricing works</Link> and use the <a href="https://hvac-flat-rate.jakegenerates.com/">HVAC Flat Rate Repair Pricing Calculator</a> to build repeatable repair tasks. Compare the policy with completed work in the <a href="https://job-profit.jakegenerates.com/">Job Profit Calculator</a>. Find those tools, replacement and maintenance calculators, and customer-ready document generators on the <Link href="/professions/hvac">HVAC tools hub</Link>.
                 </p>
               </section>
 

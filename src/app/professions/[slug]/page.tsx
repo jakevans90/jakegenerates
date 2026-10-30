@@ -48,12 +48,13 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
     </div></section>}
 
     {profession.slug === "hvac" && <section className="profession-guide"><div className="shell profession-guide-inner">
-      <div><p className="kicker">HVAC pricing guides</p><h2>Price recurring work and service calls with confidence.</h2><p>Use practical frameworks for maintenance agreements, service-call economics, and diagnostic-fee policies, then run your own costs through the matching calculator.</p></div>
+      <div><p className="kicker">HVAC pricing guides</p><h2>Price recurring work, service calls, and repairs with confidence.</h2><p>Use practical frameworks for maintenance agreements, service-call economics, diagnostic-fee policies, and flat-rate repair tasks, then run your own costs through the matching calculator.</p></div>
       <div className="profession-guide-actions">
         <Link className="calculator-button" href="/guides/markup-vs-margin-for-contractors">Read the markup vs. margin guide <span aria-hidden="true">→</span></Link>
         <Link className="calculator-button" href="/guides/how-to-price-an-hvac-maintenance-agreement">Read the maintenance-agreement guide <span aria-hidden="true">→</span></Link>
         <Link className="calculator-button" href="/guides/how-to-price-an-hvac-service-call">Read the service-call pricing guide <span aria-hidden="true">→</span></Link>
         <Link className="calculator-button" href="/guides/hvac-diagnostic-fee-vs-service-call-fee">Compare diagnostic and service-call fees <span aria-hidden="true">→</span></Link>
+        <Link className="calculator-button" href="/guides/how-hvac-flat-rate-pricing-works">Learn how HVAC flat-rate pricing works <span aria-hidden="true">→</span></Link>
       </div>
     </div></section>}
 
