@@ -260,6 +260,9 @@ export default function HvacServiceCallPricingGuide() {
                 <p>
                   Put the rule in writing, train dispatchers and technicians to describe it the same way, and track the resulting margin. Do not improvise the waiver at the kitchen table.
                 </p>
+                <p>
+                  For a focused comparison of trip charges, diagnostic fees, invoice minimums, repair tasks, and customer-facing credit rules, read <Link href="/guides/hvac-diagnostic-fee-vs-service-call-fee">HVAC Diagnostic Fee vs Service Call Fee</Link>.
+                </p>
               </section>
 
               <section id="tax-materials">
